@@ -1,0 +1,156 @@
+body {
+    margin-top: 10px;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #3a3a3a;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    margin-top: 15px;
+}
+
+#logo {
+    background-color: rgb(240, 126, 7);
+    margin-right: 40px;
+}
+
+#image-home {
+    z-index: 0;
+    position: relative;
+}
+
+#image-home img {
+    margin-left: -450px;
+}
+
+#navigation-links {
+    list-style-type: none;
+    background-color: rgb(187, 187, 187);
+    overflow: hidden;
+}
+
+#navigation-links li a {
+    float: left;
+    padding: 12px 15px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+#navigation-links li a:hover {
+    color: white;
+    background-color: rgb(240, 126, 7);
+}
+
+#navigation-links li a:active {
+    background-color: rgb(205, 105, 0)
+}
+
+.navbar-right {
+    float: right;
+    margin-right: 15px;
+}
+
+.box-info {
+    position: relative;
+    z-index: 1;
+    margin: -20px auto 35px auto;
+    display: block;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    height: 35px;
+    padding-top: 1%;
+    text-align: center;
+    background-color: rgb(81, 184, 213);
+    width: 70%;
+}
+
+.grid-pesanan {
+    width: 960px;
+    margin: 0 auto;
+    display: inline-block;
+    border: 8px solid rgb(81, 184, 213);
+}
+
+#destination, #time, #count {
+    width: 31%;
+    float: left;
+    margin: 0 5px;
+    height: 200px;
+    padding: 5px;
+}
+
+#time {
+    border-left: 3px solid rgb(81, 184, 213);
+    border-right: 3px solid rgb(81, 184, 213);
+}
+
+.grid-pesanan form h1 {
+    font-weight: bold;
+}
+
+#box-pesanan {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+#box-pesanan li {
+    float: left;
+}
+
+#box-pesanan li a {
+    padding: 12px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.imageHome {
+    width: 100%
+}
+div.question.ui.grid{
+  padding: 0;
+  margin: 0;
+  min-height: 150px;
+}
+
+div.ui.two.column.grid{
+  margin-top: 10px;
+}
+
+div.ui.one.column.grid.voteQues{
+  width: 70%;
+}
+
+div.voteAns{
+  width: 30%;
+  text-align: center;
+}
+
+div.Ques{
+  width: 69%;
+}
+
+div.iklan{
+  padding-top: 15px;
+  width: 30%;
+}
+.banner1{
+  width: 100%;
+}
+
+div.ui.icon{
+  margin-top: 4px;
+  width: 40%;
+}
+.textAnswer{
+  margin-top: 40px;
+}
+.buttonAnswer{
+  margin-top: 20px;
+}

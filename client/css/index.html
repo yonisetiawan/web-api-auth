@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded" type="image/gif" sizes="16x16">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
+    <title>Stackoverflow</title>
+</head>
+<body>
+  <div class="container">
+      <nav id="navigation-bar" class="navbar navbar-default">
+          <ul id="navigation-links">
+              <li><a id="logo" href="#">Traveloka</a></li>
+              <li><a href="#">Hotel</a></li>
+              <li><a href="#">Tiket</a></li>
+              <li><a href="#">Promo</a></li>
+              <li class="navbar-right"><a href="#">Masuk</a></li>
+              <li class="navbar-right"><a href="#">Daftar</a></li>
+          </ul>
+      </nav>
+      <div id="image-home" class="carousel-inner">
+          <img src="https://da8hvrloj7e7d.cloudfront.net/imageResource/2016/05/19/1463657700722-e8ebfa794d4aeac7e4d12f5a32dbb37a.png">
+      </div>
+
+      <div class="box-info">
+          <h1><b>Cari tiket pesawat murah &amp; promo secara online dengan cepat dan mudah di sini!</b></h1>
+      </div>
+
+      <div class="grid-pesanan">
+          <form id="destination">
+              <h1>1 Tujuan Penerbangan</h1>
+
+              Kota Asal:<br>
+              <input type="text" name="kotaasal">
+              <br> Kota Tujuan:<br>
+              <input type="text" name="kotatujuan"><br>
+          </form>
+
+          <form id="time">
+              <h1>2 Waktu Penerbangan</h1>
+              <hr>
+              Tanggal Berangkat:<br>
+              <input type="date" name="tanggal">
+          </form>
+
+          <form id="count">
+              <h1>3 Cari Tiket</h1>
+              <hr>
+              Jumlah Penumpang:
+              <select>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+              </select>
+              <br> Kelas Penerbangan:
+              <select>
+                  <option>Economy</option>
+                  <option>Business</option>
+                  <option>First Class</option>
+              </select>
+              <input type="submit" name="" value="Cari Tiket">
+          </form>
+      </div>
+  </div>
+
+
+    <script src="./js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/semantic.min.js"></script>
+</body>
+
+</html>
