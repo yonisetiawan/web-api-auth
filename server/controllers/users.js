@@ -4,6 +4,7 @@ const passwordHash = require('password-hash');
 
 
 var Users = {
+
     login: function(req, res, next) {
         modelsUsers.find({
             email: req.body.email
@@ -11,11 +12,12 @@ var Users = {
             if (result) {
                 if (passwordHash.verify(req.body.password, result[0].password)) {
                     var token = jwt.sign({
-                        id: result.id,
+                        id: result[0].id,
+                        name: result[0].name,
                         expiresIn: '1h'
-                    }, "Code Decode Mohon Dipindah ke Config / .env")
+                    }, "CODEuntukDECODE")
                     res.send({
-                      token: token
+                        token: token
                     })
                 } else {
                     res.send("Password incorrect")
@@ -43,24 +45,27 @@ var Users = {
             }
         })
     },
-    delete: function(req, res, next) {
-      modelsUsers.find({
-        email:req.body.email
-      },function(err, result) {
-        if(err){
-          res.send(err)
-        }else{
-          result[0].remove(function(err) {
-            if(err){
-              res.send(err)
+
+    decode: function(req, res, next) {
+        jwt.verify(req.body.token, "CODEuntukDECODE", function(err, decoded) {
+            if (err) {
+              res.send(err.name)
+                /*
+                  err = {
+                    name: 'TokenExpiredError',
+                    message: 'jwt expired',
+                    expiredAt: 1408621000
+                  }
+                */
             }else{
-              res.send({
-                status:"Data Terhapus"
-              })
+              res.send(decoded.name)
             }
-          })
-          
-        }
+        });
+    },
+
+    getAll: function(req, res, next) {
+      modelsUsers.find({},function(err, result) {
+        res.send(result)
       })
     }
 }

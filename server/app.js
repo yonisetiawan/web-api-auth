@@ -6,13 +6,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors')//tambahan agar halaman bisa diakses dari client
 var user = require('./routes/user');
-var artikel = require('./routes/artikel')
+// var artikel = require('./routes/artikel')
 var jwt = require('jsonwebtoken')
 const mongoose = require('mongoose');
 
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/blog-ttd')
+mongoose.connect('mongodb://localhost/login')
 
 var app = express();
 
@@ -30,7 +30,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', user);
-app.use('/artikel',artikel)
+// app.use('/artikel',artikel)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
